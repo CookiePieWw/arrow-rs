@@ -2039,9 +2039,9 @@ async fn test_utf8() {
     // test for utf8
     Test {
         reader: &reader,
-        expected_min: Arc::new(StringArray::from(vec!["a", "e"])),
-        expected_max: Arc::new(StringArray::from(vec!["d", "i"])),
-        expected_null_counts: UInt64Array::from(vec![1, 0]),
+        expected_min: Arc::new(StringArray::from(vec!["a", "f"])),
+        expected_max: Arc::new(StringArray::from(vec!["e", "i"])),
+        expected_null_counts: UInt64Array::from(vec![0, 1]),
         expected_row_counts: Some(UInt64Array::from(vec![5, 5])),
         column_name: "utf8",
         check: Check::Both,
@@ -2051,9 +2051,9 @@ async fn test_utf8() {
     // test for large_utf8
     Test {
         reader: &reader,
-        expected_min: Arc::new(LargeStringArray::from(vec!["a", "e"])),
-        expected_max: Arc::new(LargeStringArray::from(vec!["d", "i"])),
-        expected_null_counts: UInt64Array::from(vec![1, 0]),
+        expected_min: Arc::new(LargeStringArray::from(vec!["a", "f"])),
+        expected_max: Arc::new(LargeStringArray::from(vec!["e", "i"])),
+        expected_null_counts: UInt64Array::from(vec![0, 1]),
         expected_row_counts: Some(UInt64Array::from(vec![5, 5])),
         column_name: "large_utf8",
         check: Check::Both,

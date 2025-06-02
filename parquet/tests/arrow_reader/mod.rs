@@ -983,8 +983,8 @@ fn create_data_batch(scenario: Scenario) -> Vec<RecordBatch> {
         }
         Scenario::UTF8 => {
             vec![
-                make_utf8_batch(vec![Some("a"), Some("b"), Some("c"), Some("d"), None]),
-                make_utf8_batch(vec![Some("e"), Some("f"), Some("g"), Some("h"), Some("i")]),
+                make_utf8_batch(vec![Some("a"), Some("b"), Some("c"), Some("d"), Some("e")]),
+                make_utf8_batch(vec![Some("f"), None, Some("g"), Some("h"), Some("i")]),
             ]
         }
         Scenario::UTF8View => {
